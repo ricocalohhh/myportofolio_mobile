@@ -12,9 +12,10 @@ class LeftDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(color: Colors.indigo),
-            child: Column(
+          Container(
+            color: Colors.indigo,
+            padding: const EdgeInsets.all(16),
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -57,7 +58,7 @@ class LeftDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.work_outline),
-            title: const Text('Add Experience'),
+            title: const Text('Tambah Pengalaman'),
             onTap: () {
               Navigator.pushReplacement(
                 context,

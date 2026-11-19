@@ -4,7 +4,7 @@ import 'package:myportofolio_mobile/main.dart';
 import 'package:myportofolio_mobile/screens/project_form.dart';
 
 void main() {
-  testWidgets('Halaman menampilkan profil dan tiga menu', (tester) async {
+  testWidgets('Halaman menampilkan profil dan empat menu', (tester) async {
     await tester.pumpWidget(const MyApp());
 
     expect(find.text('2506539990'), findsOneWidget);
@@ -13,6 +13,7 @@ void main() {
 
     expect(find.text('Lihat Proyek'), findsOneWidget);
     expect(find.text('Tambah Proyek'), findsOneWidget);
+    expect(find.text('Tambah Pengalaman'), findsOneWidget);
     expect(find.text('Logout'), findsOneWidget);
   });
 
